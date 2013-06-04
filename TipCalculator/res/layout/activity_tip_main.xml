@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".TipMainActivity" >
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:hint="Enter Amount" 
+        android:text="">
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/tip20"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tip15"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/tip15"
+        android:text="20%" 
+        android:onClick="Tip20" />
+    
+    <Button
+        android:id="@+id/tip10"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/amount"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="42dp"
+        android:layout_toLeftOf="@+id/tip15"
+        android:text="10%" 
+        android:onClick="Tip10" />
+
+    <Button
+        android:id="@+id/tip15"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tip10"
+        android:layout_alignBottom="@+id/tip10"
+        android:layout_centerHorizontal="true"
+        android:text="15%" 
+        android:onClick="Tip15" />
+
+    <TextView
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tip10"
+        android:layout_below="@+id/tip10"
+        android:layout_marginTop="74dp"
+        android:ems="10"
+        android:text="Tip is: " />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editText1"
+        android:layout_alignBottom="@+id/editText1"
+        android:layout_alignRight="@+id/tip20"
+        android:layout_marginRight="30dp"
+        android:ems="10" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextView01"
+        android:layout_marginTop="82dp"
+        android:layout_toRightOf="@+id/tip15" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
